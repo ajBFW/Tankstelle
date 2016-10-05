@@ -1,0 +1,8 @@
+LABEL Clonezilla Live
+	MENU LABEL ^Clonezilla Live Umgebung
+	TEXT HELP
+	Startet Clonezilla (Linux).
+	Sichern von Linux und Windows Partitionen.
+	ENDTEXT
+	KERNEL /images2/czilla/vmlinuz
+	APPEND initrd=/images2/czilla/initrd.img fetch=http://192.168.100.10/filesystem.squashfs union=overlay boot=live config noswap edd=on nomodeset noprompt nosplash locales="de_DE.UTF-8" keyboard-layouts="de" ocs_live_run="ocs-live-general" ocs_live_extra_param="" ocs_live_batch=no gfxpayload=1024x768x16,1024x768 ip=frommedia i915.blacklist=yes radeonhd.blacklist=yes nouveau.blacklist=yes vmwgfx.blacklist=yes vga=788

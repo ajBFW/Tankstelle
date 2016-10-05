@@ -1,0 +1,14 @@
+Allgemeine Informationen zu PXE Boot.
+
+Voraussetzungen:
+  Netzwerkkarte mit PXE UnterstueÅtzung, sowie aktive
+  Boot von Netzwerkadapter Option im Bios.
+
+Hilfreiche Links:
+
+* Etherboot - what made this possible
+  http://etherboot.sourceforge.net/
+  http://www.rom-o-matic.net/
+
+* Syslinux - used inside the .ISO and by the HD installer
+  http://www.syslinux.org/

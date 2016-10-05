@@ -1,17 +1,10 @@
 DEFAULT			vesamenu.c32
 
 F1 /pxemenu/hilfe.txt
-F2 /pxemenu/f2.txt
-F3 /pxemenu/f3.txt
-F4 /pxemenu/f4.txt
-F5 /pxemenu/f5.txt
-F6 /pxemenu/f6.txt
-F7 /pxemenu/f7.txt
-F8 /pxemenu/f8.txt
-F9 /pxemenu/f9.txt
+
 
 PROMPT			0
-TIMEOUT			300	# 100 = 10 Sekunden
+TIMEOUT			300	
 ONTIMEOUT		localboot
 KBDMAP			german.kbd
 MENU TITLE		PXE BootmenÅ
@@ -25,9 +18,9 @@ MENU TABMSGROW	19
 MENU ENDROW		24
 MENU VSHIFT		2
 
-MENU color title	1;36;44    #ffffffff #00000000 std
-MENU color sel		7;37;40    #ffffffff #ffdaa520 all
-MENU color hotsel	1;7;37;40  #ffffffff #ffdaa520 all
+MENU color title	1;36;44    
+MENU color sel		7;37;40    
+MENU color hotsel	1;7;37;40  
 
 LABEL localboot
 	MENU LABEL Boot from ^Disk..
@@ -52,22 +45,35 @@ LABEL poweroff
 	
 MENU SEPARATOR	
 
+MENU BEGIN Clonezilla
+MENU TITLE HDD Images erstellen & Widerherstellen
+        LABEL Return
+        MENU LABEL ^ZurueÅck
+        TEXT HELP
+        ZurueÅck zum letztem MenÅue
+        ENDTEXT
+        MENU EXIT
+        MENU SEPARATOR
+		MENU INCLUDE pxemenu/clone.menu
+MENU END
 
-LABEL ^Clonezilla Live
-	TEXT HELP
-	Startet Clonezilla (Linux).
-	Sichern von Linux und Windows Partitionen.
-	Dr¸cke F5 f¸r Details.
-	ENDTEXT
-	KERNEL /images2/czilla/vmlinuz
-	APPEND initrd=/images2/czilla/initrd.img fetch=http://192.168.100.10/filesystem.squashfs union=overlay boot=live config noswap edd=on nomodeset noprompt nosplash locales="de_DE.UTF-8" keyboard-layouts="de" ocs_live_run="ocs-live-general" ocs_live_extra_param="" ocs_live_batch=no gfxpayload=1024x768x16,1024x768 ip=frommedia i915.blacklist=yes radeonhd.blacklist=yes nouveau.blacklist=yes vmwgfx.blacklist=yes vga=788
-
+MENU BEGIN Windows
+MENU TITLE Windows Eval ISO Installation
+        LABEL Return
+        MENU LABEL ^ZurueÅck
+        TEXT HELP
+        ZurueÅck zum letztem MenÅue
+        ENDTEXT
+        MENU EXIT
+        MENU SEPARATOR
+		MENU INCLUDE pxemenu/windows.menu
+MENU END
 
 LABEL memtest86+
 	MENU LABEL ^Memtest86+
 	TEXT HELP
-	PrÅft RAM Speichermodule auf Fehler.
-	DrÅcke F9 fÅr Details.
+	Testet RAM Speichermodule auf Fehler.
+	F9 fÅuer Details.
 	ENDTEXT
 	KERNEL /images2/memtest
 
@@ -75,5 +81,5 @@ LABEL hilfe
 	MENU LABEL ^Hilfe
 	TEXT HELP
 	Allgemeine PXE Informationen werden mit "F1" angezeigt.
-	UntermenÅs kînnen Sie mit "Backspace" oder "Esc" verlassen.
+	UntermenÅues koennen Sie mit "Backspace" oder "Esc" verlassen.
 ENDTEXT

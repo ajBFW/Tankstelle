@@ -1,0 +1,13 @@
+2. Memtest86+
+
+memtest86 ist testet den RAM auf Fehler.
+Das Programm ist betriebssystemunabhaengig.
+Speicherfehler koennen in einer Reportdatei angezeigt werden. 
+
+  -> Der Test kann je nach PC-Geschwindigkeit und
+    RAM-Groesse mehrere Stunden dauern !
+
+* Hilfreiche Links:
+
+- Memtest86 - memory test for x86 (PC) computers
+  http://www.memtest86.com/

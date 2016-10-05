@@ -1,0 +1,8 @@
+LABEL Windows10
+	MENU LABEL ^Windows 10 64Bit Evaluation
+	TEXT HELP
+	Startet die Windows 10 Installation.
+	ENDTEXT
+	KERNEL /images2/memdisk/memdisk
+	INITRD /images2/iso/windows10.iso
+	APPEND iso raw
