@@ -48,9 +48,9 @@ MENU SEPARATOR
 MENU BEGIN Clonezilla
 MENU TITLE HDD Images erstellen & Widerherstellen
         LABEL Return
-        MENU LABEL ^ZurueÅck
+        MENU LABEL ^ZurÅck
         TEXT HELP
-        ZurueÅck zum letztem MenÅue
+        ZurÅck zum letztem MenÅ
         ENDTEXT
         MENU EXIT
         MENU SEPARATOR
@@ -60,9 +60,9 @@ MENU END
 MENU BEGIN Windows
 MENU TITLE Windows Eval ISO Installation
         LABEL Return
-        MENU LABEL ^ZurueÅck
+        MENU LABEL ^ZurÅck
         TEXT HELP
-        ZurueÅck zum letztem MenÅue
+        ZurÅck zum letztem MenÅ
         ENDTEXT
         MENU EXIT
         MENU SEPARATOR
@@ -73,7 +73,7 @@ LABEL memtest86+
 	MENU LABEL ^Memtest86+
 	TEXT HELP
 	Testet RAM Speichermodule auf Fehler.
-	F9 fÅuer Details.
+	F9 fÅr Details.
 	ENDTEXT
 	KERNEL /images2/memtest
 
@@ -81,5 +81,5 @@ LABEL hilfe
 	MENU LABEL ^Hilfe
 	TEXT HELP
 	Allgemeine PXE Informationen werden mit "F1" angezeigt.
-	UntermenÅues koennen Sie mit "Backspace" oder "Esc" verlassen.
+	UntermenÅs koennen Sie mit "Backspace" oder "Esc" verlassen.
 ENDTEXT
