@@ -46,7 +46,7 @@ LABEL poweroff
 MENU SEPARATOR	
 
 MENU BEGIN Clonezilla
-MENU TITLE HDD Images erstellen & Widerherstellen
+MENU TITLE HDD Images erstellen & Wiederherstellen
         LABEL Return
         MENU LABEL ^ZurÅck
         TEXT HELP
